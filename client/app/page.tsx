@@ -4,13 +4,13 @@ import { Shield, Clock, Users, CheckCircle, MapPin, Phone } from 'lucide-react';
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Navigation */}
+      {/* Navigation - Enhanced Mobile */}
       <nav className="bg-slate-900 text-white sticky top-0 z-50 border-b border-slate-800">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-primary-400" />
-              <span className="text-2xl font-bold">SCEND</span>
+              <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-primary-400" />
+              <span className="text-xl sm:text-2xl font-bold">SCEND</span>
             </div>
             <div className="hidden md:flex space-x-6">
               <Link href="#services" className="hover:text-primary-400 transition">Services</Link>
@@ -18,16 +18,16 @@ export default function Home() {
               <Link href="#pricing" className="hover:text-primary-400 transition">Pricing</Link>
               <Link href="#contact" className="hover:text-primary-400 transition">Contact</Link>
             </div>
-            <div className="flex space-x-3">
+            <div className="flex space-x-2 sm:space-x-3">
               <Link 
                 href="/login" 
-                className="px-4 py-2 border border-primary-500 text-primary-400 rounded-lg hover:bg-primary-500 hover:text-white transition"
+                className="px-3 py-2 sm:px-4 text-sm sm:text-base border border-primary-500 text-primary-400 rounded-lg hover:bg-primary-500 hover:text-white transition"
               >
                 Login
               </Link>
               <Link 
                 href="/request" 
-                className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition"
+                className="px-3 py-2 sm:px-4 text-sm sm:text-base bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition whitespace-nowrap"
               >
                 Request Protection
               </Link>
@@ -36,99 +36,88 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      {/* Hero Section with Parallax Effect */}
-      <section className="relative text-white py-20 md:py-32 min-h-[700px] flex items-center" style={{ backgroundAttachment: 'fixed' }}>
-        {/* Background Image Layer - Will parallax scroll */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: "url('/images/team-security.jpg')",
-            backgroundPosition: 'center center',
-            filter: 'brightness(0.9) contrast(1.3)',
-            backgroundAttachment: 'fixed'
-          }}
-        />
+      {/* Hero Section - Enhanced Mobile Responsive */}
+      <section className="relative text-white py-12 sm:py-16 md:py-32 min-h-[600px] sm:min-h-[650px] md:min-h-[700px] flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)' }} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 80% 50%, rgba(20, 184, 166, 0.2) 0%, transparent 50%)' }} />
         
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
-        
-        {/* Content - Must have relative z-10 to appear above backgrounds */}
-        <div className="container mx-auto px-4 relative z-10">
+        {/* Content */}
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight" style={{ textShadow: '0 6px 20px rgba(0,0,0,0.9), 0 3px 8px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,1)' }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-2">
               <span className="text-white">Verified Protection.</span><br />
               <span className="text-primary-400">Discreetly Delivered.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white mb-8 font-medium" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,0.8)' }}>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-100 mb-6 sm:mb-8 px-4">
               Nigeria&apos;s first technology-enabled platform for professional executive protection. 
               Trusted by CEOs, corporations, and high-profit individuals.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <Link 
                 href="/request"
-                className="px-8 py-4 bg-primary-500 text-white text-lg rounded-lg hover:bg-primary-600 transition inline-flex items-center justify-center font-semibold shadow-lg"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-primary-500 text-white text-base sm:text-lg rounded-lg hover:bg-primary-600 transition inline-flex items-center justify-center font-semibold shadow-lg"
               >
-                <Shield className="mr-2 h-5 w-5" />
+                <Shield className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Request Security Now
               </Link>
               <Link 
                 href="/professionals"
-                className="px-8 py-4 border-2 border-white bg-white/10 backdrop-blur-sm text-white text-lg rounded-lg hover:bg-white hover:text-slate-900 transition inline-flex items-center justify-center font-semibold"
+                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white bg-white/10 backdrop-blur-sm text-white text-base sm:text-lg rounded-lg hover:bg-white hover:text-slate-900 transition inline-flex items-center justify-center font-semibold"
               >
                 Join as Professional
               </Link>
             </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white font-medium" style={{ textShadow: '0 3px 10px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.8)' }}>
-              <div className="flex items-center bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="h-5 w-5 mr-2 text-primary-400" />
-                Licensed & Verified
+            <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-slate-200 px-2">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2 text-primary-400 flex-shrink-0" />
+                <span>Licensed & Verified</span>
               </div>
-              <div className="flex items-center bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="h-5 w-5 mr-2 text-primary-400" />
-                Available 24/7
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2 text-primary-400 flex-shrink-0" />
+                <span>Available 24/7</span>
               </div>
-              <div className="flex items-center bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="h-5 w-5 mr-2 text-primary-400" />
-                Nigeria-Wide Coverage
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2 text-primary-400 flex-shrink-0" />
+                <span>Nigeria-Wide</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Indicators */}
-      <section className="py-12 bg-white border-b">
+      {/* Trust Indicators - Mobile Enhanced */}
+      <section className="py-8 sm:py-10 md:py-12 bg-white border-b">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-primary-600">300+</div>
-              <div className="text-gray-600 mt-2">Verified Professionals</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600">300+</div>
+              <div className="text-xs sm:text-sm md:text-base text-gray-600 mt-1 sm:mt-2">Verified Professionals</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-600">24/7</div>
-              <div className="text-gray-600 mt-2">Available Service</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600">24/7</div>
+              <div className="text-xs sm:text-sm md:text-base text-gray-600 mt-1 sm:mt-2">Available Service</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-600">6</div>
-              <div className="text-gray-600 mt-2">Major Cities</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600">6</div>
+              <div className="text-xs sm:text-sm md:text-base text-gray-600 mt-1 sm:mt-2">Major Cities</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-600">100%</div>
-              <div className="text-gray-600 mt-2">Verified Credentials</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600">100%</div>
+              <div className="text-xs sm:text-sm md:text-base text-gray-600 mt-1 sm:mt-2">Verified Credentials</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      {/* Services Section - Mobile Enhanced */}
+      <section id="services" className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600">Professional protection tailored to your needs</p>
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Our Services</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 px-4">Professional protection tailored to your needs</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 title: 'Personal Protection',
